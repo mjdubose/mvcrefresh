@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Videly.Models;
 using System.Data.Entity;
+using Videly.ViewModels;
 
 
 namespace Videly.Controllers
@@ -22,7 +23,24 @@ namespace Videly.Controllers
         {
             _context.Dispose();
         }
-       
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new ConstomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+            
+            return View(viewModel);
+        }
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return RedirectToAction("Index","Customer");
+        }
+
         // GET: Customer
         public ActionResult Index()
         {
