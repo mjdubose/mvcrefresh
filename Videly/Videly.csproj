@@ -207,30 +207,46 @@
     <Compile Include="Migrations\201608241906413_InitialModel.Designer.cs">
       <DependentUpon>201608241906413_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608241917033_AddIsSubscribedToCustomer.cs" />
-    <Compile Include="Migrations\201608241917033_AddIsSubscribedToCustomer.Designer.cs">
-      <DependentUpon>201608241917033_AddIsSubscribedToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\201608251629230_FixTableNames.cs" />
+    <Compile Include="Migrations\201608251629230_FixTableNames.Designer.cs">
+      <DependentUpon>201608251629230_FixTableNames.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608241922569_AddMembershipType.cs" />
-    <Compile Include="Migrations\201608241922569_AddMembershipType.Designer.cs">
-      <DependentUpon>201608241922569_AddMembershipType.cs</DependentUpon>
+    <Compile Include="Migrations\201608251632259_populateMembershipTypes.cs" />
+    <Compile Include="Migrations\201608251632259_populateMembershipTypes.Designer.cs">
+      <DependentUpon>201608251632259_populateMembershipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608241927044_PopulateMembershipTypes.cs" />
-    <Compile Include="Migrations\201608241927044_PopulateMembershipTypes.Designer.cs">
-      <DependentUpon>201608241927044_PopulateMembershipTypes.cs</DependentUpon>
+    <Compile Include="Migrations\201608251649293_addTextPropertyToMembershipTypes.cs" />
+    <Compile Include="Migrations\201608251649293_addTextPropertyToMembershipTypes.Designer.cs">
+      <DependentUpon>201608251649293_addTextPropertyToMembershipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608241938118_applyannotationstocustomername.cs" />
-    <Compile Include="Migrations\201608241938118_applyannotationstocustomername.Designer.cs">
-      <DependentUpon>201608241938118_applyannotationstocustomername.cs</DependentUpon>
+    <Compile Include="Migrations\201608251650235_updateTextcolumnofmembershiptypes.cs" />
+    <Compile Include="Migrations\201608251650235_updateTextcolumnofmembershiptypes.Designer.cs">
+      <DependentUpon>201608251650235_updateTextcolumnofmembershiptypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251831477_AddBirthDateToTable.cs" />
+    <Compile Include="Migrations\201608251831477_AddBirthDateToTable.Designer.cs">
+      <DependentUpon>201608251831477_AddBirthDateToTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251845294_formatdatetimetojustdate.cs" />
+    <Compile Include="Migrations\201608251845294_formatdatetimetojustdate.Designer.cs">
+      <DependentUpon>201608251845294_formatdatetimetojustdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251913116_add properties to movie class, create genre table, and link them.cs" />
+    <Compile Include="Migrations\201608251913116_add properties to movie class, create genre table, and link them.Designer.cs">
+      <DependentUpon>201608251913116_add properties to movie class, create genre table, and link them.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251914043_addvaluestogenre.cs" />
+    <Compile Include="Migrations\201608251914043_addvaluestogenre.Designer.cs">
+      <DependentUpon>201608251914043_addvaluestogenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\membershiptype.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
-    <Compile Include="Models\TempCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -316,17 +332,29 @@
     <EmbeddedResource Include="Migrations\201608241906413_InitialModel.resx">
       <DependentUpon>201608241906413_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608241917033_AddIsSubscribedToCustomer.resx">
-      <DependentUpon>201608241917033_AddIsSubscribedToCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608251629230_FixTableNames.resx">
+      <DependentUpon>201608251629230_FixTableNames.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608241922569_AddMembershipType.resx">
-      <DependentUpon>201608241922569_AddMembershipType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608251632259_populateMembershipTypes.resx">
+      <DependentUpon>201608251632259_populateMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608241927044_PopulateMembershipTypes.resx">
-      <DependentUpon>201608241927044_PopulateMembershipTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608251649293_addTextPropertyToMembershipTypes.resx">
+      <DependentUpon>201608251649293_addTextPropertyToMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608241938118_applyannotationstocustomername.resx">
-      <DependentUpon>201608241938118_applyannotationstocustomername.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608251650235_updateTextcolumnofmembershiptypes.resx">
+      <DependentUpon>201608251650235_updateTextcolumnofmembershiptypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251831477_AddBirthDateToTable.resx">
+      <DependentUpon>201608251831477_AddBirthDateToTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251845294_formatdatetimetojustdate.resx">
+      <DependentUpon>201608251845294_formatdatetimetojustdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251913116_add properties to movie class, create genre table, and link them.resx">
+      <DependentUpon>201608251913116_add properties to movie class, create genre table, and link them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251914043_addvaluestogenre.resx">
+      <DependentUpon>201608251914043_addvaluestogenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

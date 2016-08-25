@@ -7,13 +7,13 @@ namespace Videly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class applyannotationstocustomername : IMigrationMetadata
+    public sealed partial class addTextPropertyToMembershipTypes : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(applyannotationstocustomername));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addTextPropertyToMembershipTypes));
         
         string IMigrationMetadata.Id
         {
-            get { return "201608241938118_applyannotationstocustomername"; }
+            get { return "201608251649293_addTextPropertyToMembershipTypes"; }
         }
         
         string IMigrationMetadata.Source

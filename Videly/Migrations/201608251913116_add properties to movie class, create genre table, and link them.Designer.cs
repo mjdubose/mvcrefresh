@@ -7,13 +7,13 @@ namespace Videly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddMembershipType : IMigrationMetadata
+    public sealed partial class addpropertiestomovieclasscreategenretableandlinkthem : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddMembershipType));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addpropertiestomovieclasscreategenretableandlinkthem));
         
         string IMigrationMetadata.Id
         {
-            get { return "201608241922569_AddMembershipType"; }
+            get { return "201608251913116_add properties to movie class, create genre table, and link them"; }
         }
         
         string IMigrationMetadata.Source
