@@ -18,7 +18,7 @@ else
         </thead>
             @foreach (var movie in Model)
             {
-                <tr><td>@movie.Name</td><td>@movie.Genre.GenreType</td></tr>
+                <tr><td><a href='/movies/details/@movie.Id'>@movie.Name</a></td><td>@movie.Genre.GenreType</td></tr>
             }
        
     </table>

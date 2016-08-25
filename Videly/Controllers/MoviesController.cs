@@ -25,17 +25,17 @@ namespace Videly.Controllers
             return View(movies);
 
         }
-        /*
-        public ActionResult Edit(int id)
+        [Route("movies/details/{Id}")]
+        public ActionResult Details(int Id)
         {
-            var customer = _context.Customers.Include(c => c.MembershipType).FirstOrDefault(x => x.Id == Id);
+            var movie = _context.Movies.Include(c=>c.Genre).FirstOrDefault(x => x.Id == Id);
 
-            if (customer == null)
+            if (movie == null)
             {
                 return HttpNotFound();
             }
+
+            return View(movie);
         }
-        
-    */
     }
 }
