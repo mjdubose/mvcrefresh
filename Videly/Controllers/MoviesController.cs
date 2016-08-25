@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Videly.Models;
 using Videly.ViewModels;
@@ -11,22 +8,15 @@ namespace Videly.Controllers
     public class MoviesController : Controller
     {
         //GET: Movies/Random
-        public ActionResult Random()
+        public ActionResult Index()
         {
-            var movie = new Movie() { Name = "Shrek!" };
-            var customers = new List<Customer>
+            List<Movie> movie = new List<Movie>
             {
-                new Customer{Name = "Customer 1"},
-                  new Customer {Name = "Customer 2"}
+                new Movie() {Id = 1, Name = "Shrek"},
+                new Movie {Id = 2, Name = "Wall-e"}
             };
-
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
-
-            return View(viewModel);
+           
+            return View(movie);
 
         }
 
