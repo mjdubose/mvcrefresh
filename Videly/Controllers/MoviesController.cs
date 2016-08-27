@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Linq;
 using System.Web.Mvc;
 using Videly.Models;
@@ -42,10 +41,36 @@ namespace Videly.Controllers
             return View(movie);
         }
 
+        [Route("movies/edit/{id}")]
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+            var viewModel = new MovieGenreViewModel
+            { Movie = movie,
+            Genre = _context.Genres.ToList()
+              
+            };
+            return View("MovieForm", viewModel);
+        }
+    
+
         [Route("movies/new/")]
         public ActionResult New()
         {
-            var moviegenre = new MovieGenreViewModel {Genre = _context.Genres.ToList()};
+            var moviegenre = new MovieGenreViewModel
+            {
+                Genre = _context.Genres.ToList(),
+                Movie = new Movie()
+                
+            };
+            moviegenre.Movie.Name = "";
+
+
+
 
             return View("MovieForm", moviegenre);
         }
@@ -64,6 +89,7 @@ namespace Videly.Controllers
                 movieToBeUpdated.Name = movie.Name;
                 movieToBeUpdated.GenreId = movie.GenreId;
                 movieToBeUpdated.NumberInStock = movie.NumberInStock;
+                movieToBeUpdated.ReleaseDate = movie.ReleaseDate;
                 movieToBeUpdated.DateAdded = movie.DateAdded;
                
             }
