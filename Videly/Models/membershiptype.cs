@@ -16,5 +16,8 @@ namespace Videly.Models
         [Required]
         [StringLength(255)]
         public string MembershipTypeText { get; set; }
+
+        public static readonly byte Unknown = 0;
+        public static readonly byte PayAsYouGo = 1;
     }
 }
