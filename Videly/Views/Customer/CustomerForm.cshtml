@@ -1,11 +1,11 @@
-﻿@model Videly.ViewModels.ConstomerViewModel 
+﻿@model Videly.ViewModels.CustomerFormViewModel 
     @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Customer</h2>
-@using (Html.BeginForm("Create", "Customer"))
+<h2>Modify Customer</h2>
+@using (Html.BeginForm("Edit", "Customer"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
