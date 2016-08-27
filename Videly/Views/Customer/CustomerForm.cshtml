@@ -5,7 +5,7 @@
 }
 
 <h2>Modify Customer</h2>
-@using (Html.BeginForm("Edit", "Customer"))
+@using (Html.BeginForm("Save", "Customer"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
@@ -13,7 +13,13 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Birthdate)
-        @Html.TextBoxFor(m => m.Customer.Birthdate, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Customer.Birthdate,"{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "MembershipTypeText"), "Select Membership Type", new {@class = "form-control"})
     </div>
     <div class="checkbox">
         <label>
@@ -21,10 +27,7 @@
         </label>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Customer.MembershipTypeId)
-        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "MembershipTypeText"), "Select Membership Type", new {@class = "form-control"})
-    </div>
+    @Html.HiddenFor(m=>m.Customer.Id)
 
     <button type="submit" class="btn btn-primary">Submit</button>
 }
