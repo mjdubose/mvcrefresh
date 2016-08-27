@@ -64,7 +64,7 @@ namespace Videly.Controllers
                 movieToBeUpdated.Name = movie.Name;
                 movieToBeUpdated.GenreId = movie.GenreId;
                 movieToBeUpdated.NumberInStock = movie.NumberInStock;
-                movieToBeUpdated.DateAdded = DateTime.Now;
+                movieToBeUpdated.DateAdded = movie.DateAdded;
                
             }
             _context.SaveChanges();
